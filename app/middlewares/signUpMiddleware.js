@@ -1,4 +1,4 @@
-import signUpValidation from '../../validation/signUpValidation.js';
+import signUpValidation from '../validations/signUpValidation.js';
 import userModel from '../schemas/user-schema.js';
 
 export default async function validSignUp(req, res, next) {
