@@ -10,12 +10,16 @@ import cors from 'cors'
 /* connect db */
 import ConnectDb from './database/index.js'
 
+/* routes */
+import router from './routes/index.js'
+
 /* initialing server */
 const app = express()
 
 /* setting server */
 app.use(json())
 app.use(cors())
+app.use(router)
 
 /*
 /* before starting to run the application I make the connection to the database
