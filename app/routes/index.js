@@ -4,8 +4,12 @@ const router = Router()
 /* Router Products */
 
 /* controllers */
-import { findProducts } from '../controllers/product-controller.js'
+import { findProducts, addProduct } from '../controllers/product-controller.js'
 
+/* get /products */
 router.get('/products', findProducts)
+
+/* post /products */
+router.post('/products', addProduct)
 
 export default router
