@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
-import 'dotenv/config';
+import mongoose from 'mongoose'
+import 'dotenv/config'
 
-export default mongoose.connect('mongodb://127.0.0.1:27017');
+export default mongoose.connect(process.env.PORT)
