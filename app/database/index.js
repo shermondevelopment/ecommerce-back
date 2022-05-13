@@ -1,4 +1,4 @@
-import mongoose from 'mongoose'
-import 'dotenv/config'
+import mongoose from 'mongoose';
+import 'dotenv/config';
 
-export default mongoose.connect(process.env.MONGO_URI)
+export default mongoose.connect(process.env.MONGO_URI);
