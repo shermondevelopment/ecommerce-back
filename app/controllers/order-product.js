@@ -14,12 +14,15 @@ const OrderController = async (req, res) => {
     const { id, email } = res.locals.user;
 
     const isValid = await validation(req.body, orderValidation);
-
     if (isValid) {
       return res.status(422).json({ error: isValid });
     }
 
-    await OrderModel.create({ ...req.body, bill_date: Date.now() });
+    await OrderModel.create({
+      ...req.body,
+      bill_date: Date.now(),
+      client_id: id
+    });
 
     transporter.sendMail({
       from: process.env.MAIL_USER,
