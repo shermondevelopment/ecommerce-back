@@ -1,4 +1,4 @@
-import Joi from 'joi'
+import Joi from 'joi';
 
 const addProductValidation = Joi.object({
   title: Joi.string()
@@ -13,6 +13,6 @@ const addProductValidation = Joi.object({
   sizes: Joi.array(),
   colors: Joi.array(),
   gallery: Joi.array()
-})
+});
 
-export default addProductValidation
+export default addProductValidation;
