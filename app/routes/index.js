@@ -1,15 +1,22 @@
-import { Router } from 'express'
+import { Router } from 'express';
 
-const router = Router()
+const router = Router();
 /* Router Products */
 
 /* controllers */
-import { findProducts, addProduct } from '../controllers/product-controller.js'
+import {
+  findProducts,
+  addProduct,
+  findSingleProduct
+} from '../controllers/product-controller.js';
 
 /* get /products */
-router.get('/products', findProducts)
+router.get('/products', findProducts);
 
 /* post /products */
-router.post('/products', addProduct)
+router.post('/products', addProduct);
 
-export default router
+/*get /product/:slug*/
+router.get('/product/:slugParam', findSingleProduct);
+
+export default router;

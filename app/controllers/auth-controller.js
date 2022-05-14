@@ -7,7 +7,7 @@ import userModel from '../schemas/user-schema.js'
 import signInValidation from '../validations/signInValidation.js'
 
 export async function signUp(req, res) {
-  const { name, email, password, passwordConfirmation } = req.body
+  const { name, email, password } = req.body
   try {
     await userModel.create({
       email,
