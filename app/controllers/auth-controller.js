@@ -2,6 +2,8 @@
 import bcrypt from 'bcrypt';
 import { stripHtml } from 'string-strip-html';
 import jwt from 'jsonwebtoken';
+import dotenv from 'dotenv';
+dotenv.config();
 //Project Modules
 import userModel from '../schemas/user-schema.js';
 import signInValidation from '../validations/signInValidation.js';
@@ -36,7 +38,7 @@ export async function signIn(req, res) {
       process.env.JWT_KEY
     );
     if (user && bcrypt.compareSync(password, user.password)) {
-      return res.status(200).json({ token });
+      return res.status(200).json({ token, name: user.name });
     }
     res.status(401).send('Credenciais não foram aceitas.');
   } catch (error) {

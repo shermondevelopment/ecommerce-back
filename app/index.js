@@ -28,7 +28,7 @@ app.use(authRouter);
 */
 
 ConnectDb.then(() =>
-  app.listen(process.env.PORT || 5500, () =>
+  app.listen(process.env.PORT || 5555, () =>
     console.log(`app running in port ${process.env.PORT} 🚀🚀🚀🚀`)
   )
 ).catch(() => console.log('Ops você não tem uma conexão com banco...😵😵❌❌'));
