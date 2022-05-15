@@ -40,6 +40,7 @@ export async function signIn(req, res) {
     }
     res.status(401).send('Credenciais não foram aceitas.');
   } catch (error) {
+    console.log(error);
     res.sendStatus(500);
   }
 }
