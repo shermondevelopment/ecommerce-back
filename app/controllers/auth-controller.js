@@ -6,7 +6,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 //Project Modules
 import userModel from '../schemas/user-schema.js';
-import signInValidation from '../validations/signInValidation.js';
+import signInValidation from '../validation/signInValidation.js';
 
 export async function signUp(req, res) {
   const { name, email, password } = req.body;
